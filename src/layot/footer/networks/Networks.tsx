@@ -2,13 +2,23 @@ import { Icon } from "../../../components/icon/Icon";
 
 import styled from "styled-components";
 
+const networks = [
+  { iconId: "inst" },
+  { iconId: "tg" },
+  { iconId: "vk" },
+  { iconId: "in" }
+];
+
 export const Networks = () => {
   return (
     <StyledNetworks>
-      <Icon iconId={"inst"} width="35" height="35" viewBox="0 0 35 35" />
-      <Icon iconId={"tg"} width="35" height="35" viewBox="0 0 35 35" />
-      <Icon iconId={"vk"} width="35" height="35" viewBox="0 0 35 35" />
-      <Icon iconId={"in"} width="35" height="35" viewBox="0 0 35 35" />
+      {networks.map(({ iconId }) => (
+        <StyledItem>
+          <StyledLink href="#">
+            <Icon iconId={iconId} width="21" height="21" viewBox="0 0 21 21" />
+          </StyledLink>
+        </StyledItem>
+      ))}
     </StyledNetworks>
   );
 };
@@ -18,4 +28,29 @@ const StyledNetworks = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 26px auto 30px;
+`;
+
+const StyledItem = styled.div`
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff1a;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #7572d5;
+    transform: translateY(-4px);
+
+    a {
+      color: #000000;
+    }
+  }
+`;
+
+const StyledLink = styled.a`
+  color: #7572d5;
+  width: 21px;
+  height: 21px;
 `;

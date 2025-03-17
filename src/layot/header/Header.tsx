@@ -3,12 +3,12 @@ import { Burger } from "./burger/Burger";
 
 import styled from "styled-components";
 
-export const Header = ({ setIsOpen, isOpen }) => {
+export const Header = ({ setIsOpen }) => {
   return (
     <StyledHeader>
       <StyledWrapper>
         <Logo />
-        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Burger setIsOpen={setIsOpen} />
       </StyledWrapper>
     </StyledHeader>
   );
@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
   right: 0;
   z-index: 10;
   padding: 0 30px;
-  @media (max-width: 1510px) {
+  @media screen and (max-width: 1510px) {
     padding: 0 15px;
   }
 `;

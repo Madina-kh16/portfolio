@@ -29,7 +29,7 @@ const StyledData = styled.div`
 `;
 
 const StyledText = styled.p`
-  font-family: Poppins;
+  font-family: "Poppins Regular";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -40,7 +40,7 @@ const StyledText = styled.p`
 const StyledLink = styled.a`
   text-decoration: none;
   color: white;
-  font-family: Josefin Sans;
+  font-family: "Josefin Sans SemiBold";
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;

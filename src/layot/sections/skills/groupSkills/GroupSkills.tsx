@@ -5,9 +5,9 @@ import styled from "styled-components";
 export const GroupSkills = () => {
   return (
     <StyledGroupSkills>
-      <StyledGroupSkillsWrapp>
+      <StyledGroupSkillsWrap>
         <Skill />
-      </StyledGroupSkillsWrapp>
+      </StyledGroupSkillsWrap>
     </StyledGroupSkills>
   );
 };
@@ -16,7 +16,7 @@ const StyledGroupSkills = styled.div`
   padding: 0 15px;
 `;
 
-const StyledGroupSkillsWrapp = styled.div`
+const StyledGroupSkillsWrap = styled.div`
   max-width: 1140px;
   margin: 0 auto;
 `;

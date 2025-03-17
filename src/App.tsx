@@ -10,8 +10,6 @@ import { Slogan } from "./layot/sections/slogan/Slogan";
 import { Contact } from "./layot/sections/contact/Contact";
 import { Testimony } from "./layot/sections/testimony/Testimony";
 
-import "./index.css";
-
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,8 +22,8 @@ function App() {
   return (
     <div className="App">
       <Menu setIsOpen={setIsOpen} isOpen={isOpen} />
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <Main />
+      <Header setIsOpen={setIsOpen} />
       <Skills />
       <Works />
       <Testimony />

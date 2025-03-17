@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const TabList = () => {
+  const lists = [
+    { text: "All" },
+    { text: "LANDING PAGE" },
+    { text: "REACT" },
+    { text: "SPA" }
+  ];
+
   return (
     <StyledTabLists>
-      <StyledTabListAll>
-        All<StyledLine></StyledLine>
-      </StyledTabListAll>
-      <StyledTabList>LANDING PAGE</StyledTabList>
-      <StyledTabList>REACT</StyledTabList>
-      <StyledTabList>SPA</StyledTabList>
+      {lists.map(({ text }) => (
+        <StyledItem>
+          <a href="#">{text}</a>
+          <StyledLine></StyledLine>
+        </StyledItem>
+      ))}
     </StyledTabLists>
   );
 };
@@ -22,31 +29,25 @@ const StyledTabLists = styled.ul`
   justify-content: space-between;
 `;
 
-const StyledTabListAll = styled.li`
-  font-family: "Poppins";
-  font-weight: 400;
+const StyledItem = styled.li`
+  font-family: "Poppins Regular";
   font-size: 14px;
   line-height: 21px;
   color: white;
   position: relative;
   left: 14px;
+
+  &:hover {
+    :last-child {
+      display: block;
+    }
+  }
 `;
 
-const StyledTabList = styled.li`
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 14px;
-  display: flex;
-  line-height: 21px;
-  color: white;
-  height: 30px;
-  align-items: center;
-`;
-
-const StyledLine = styled.div`
+const StyledLine = styled.span`
+  display: none;
   position: absolute;
   top: 15px;
-  left: -14px;
-  width: 44px;
+  width: 100%;
   border-bottom: 10px solid #7572d5;
 `;

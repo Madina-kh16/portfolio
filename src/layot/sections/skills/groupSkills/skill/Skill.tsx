@@ -5,57 +5,51 @@ import styled from "styled-components";
 export const Skill = () => {
   const skill = [
     {
-      id: 1,
       iconId: "code",
       name: "html5",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
-      id: 2,
       iconId: "css",
       name: "css3",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
-      id: 3,
       iconId: "react",
-      name: "React",
+      name: "react",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
-      id: 4,
       iconId: "typescript",
       name: "typescript",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
-      id: 5,
       iconId: "styled",
       name: "styled components",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
-      id: 6,
       iconId: "figma",
-      name: "WEB DESIgN  ",
+      name: "WEB DESIgN",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-    }];
+    }
+  ];
+
   return (
     <StyledGroupSkillsItems>
-      {skill.map(({ id, iconId, name, text }) => {
-        return (
-          <StyledSkill key={id}>
-            <StyledSkillCommon>
-              <StyledSkillRomb></StyledSkillRomb>
-              <Img>
-                <Icon iconId={iconId} />
-              </Img>
-            </StyledSkillCommon>
-            <SkillName>{name.toUpperCase()}</SkillName>
-            <SkillDesc>{text}</SkillDesc>
-          </StyledSkill>
-        );
-      })}
+      {skill.map(({ iconId, name, text }) => (
+        <StyledSkill>
+          <StyledSkillCommon>
+            <StyledSkillRomb></StyledSkillRomb>
+            <Img>
+              <Icon iconId={iconId} />
+            </Img>
+          </StyledSkillCommon>
+          <SkillName>{name.toUpperCase()}</SkillName>
+          <SkillDesc>{text}</SkillDesc>
+        </StyledSkill>
+      ))}
     </StyledGroupSkillsItems>
   );
 };
@@ -65,10 +59,10 @@ const StyledGroupSkillsItems = styled.div`
   gap: 20px;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -100,7 +94,7 @@ const Img = styled.div`
   left: 15px;
 `;
 
-const SkillName = styled.div`
+const SkillName = styled.h3`
   font-family: "Josefin Sans Bold";
   font-weight: 700;
   font-size: 16px;
@@ -110,8 +104,8 @@ const SkillName = styled.div`
   text-align: center;
 `;
 
-const SkillDesc = styled.div`
-  font-family: Poppins;
+const SkillDesc = styled.p`
+  font-family: "Poppins Regular";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const Burger = ({ setIsOpen }) => {
   const handleOpen = () => setIsOpen(true);
+
   return (
     <StyledBurger onClick={handleOpen}>
       <Icon

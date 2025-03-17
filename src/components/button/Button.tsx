@@ -16,7 +16,7 @@ const StyledButton = styled.div`
   max-width: 170px;
   height: 32px;
   margin: 15px auto;
-  font-family: Poppins;
+  font-family: "Poppins Regular";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -24,7 +24,7 @@ const StyledButton = styled.div`
   color: white;
 `;
 
-const StyledLine = styled.div`
+const StyledLine = styled.span`
   width: 77px;
   position: absolute;
   border-bottom: 10px solid #7572d5;

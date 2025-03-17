@@ -9,7 +9,7 @@ export const Footer = () => {
       <StyledWrapper>
         <Name>Svetlana</Name>
         <Networks />
-        <Link href="">© 2023 Svetlana Dyablo, All Rights Reserved.</Link>
+        <Link href="#">© 2023 Svetlana Dyablo, All Rights Reserved.</Link>
         <Arrow>
           <Icon
             width={"16"}
@@ -33,14 +33,14 @@ const StyledWrapper = styled.div`
   text-align: center;
 `;
 
-const Name = styled.div`
-  font-family: Josefin Sans;
+const Name = styled.span`
+  font-family: "Josefin Sans Bold";
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 3px;
   color: white;
-  @media (max-width: 360px) {
+  @media screen and (max-width: 360px) {
     font-size: 16px;
   }
 `;
@@ -48,7 +48,7 @@ const Name = styled.div`
 const Link = styled.a`
   color: #495057;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: "Poppins Regular";
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;

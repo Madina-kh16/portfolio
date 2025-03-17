@@ -7,7 +7,7 @@ export const Slogan = () => {
   return (
     <StyledSlogan>
       <StyledWrapper>
-        <Title text={"I AM AVAILABLE FOR FREELANCE"} />
+        <Title text={"I Am Available For Freelance"} />
         <Button text={"HIRE ME"} />
       </StyledWrapper>
     </StyledSlogan>

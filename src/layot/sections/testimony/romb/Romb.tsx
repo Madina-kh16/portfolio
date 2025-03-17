@@ -17,7 +17,7 @@ const StyledRomb = styled.div`
   position: relative;
   width: 80px;
   margin: 0 auto 50px;
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     margin: 60px auto 50px;
   }
 `;
