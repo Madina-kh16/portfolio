@@ -24,10 +24,15 @@ const StyledMain = styled.section`
 `;
 
 const Wrapper = styled.div`
+  max-width: 1140px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  @media screen and (max-width: 1260px) {
+    justify-content: space-around;
+  }
   ${myTheme.media.tablet} {
     flex-direction: column;
     gap: 58px;

@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
 import { Cross } from "./cross/Cross";
 
 import styled from "styled-components";
 
 export const Menu = ({ isOpen, setIsOpen }) => {
+  const menuItem = [
+    { text: "Home" },
+    { text: "Skills" },
+    { text: "Works" },
+    { text: "Testimony" },
+    { text: "Contact" }
+  ];
   return (
     <Nav
       style={{
@@ -11,21 +17,11 @@ export const Menu = ({ isOpen, setIsOpen }) => {
       }}
     >
       <MenuItems>
-        <MenuItem>
-          <StyledLink href="#">Home</StyledLink>
-        </MenuItem>
-        <MenuItem>
-          <StyledLink href="#">Skills</StyledLink>
-        </MenuItem>
-        <MenuItem>
-          <StyledLink href="#">Works</StyledLink>
-        </MenuItem>
-        <MenuItem>
-          <StyledLink href="#">Testimony</StyledLink>
-        </MenuItem>
-        <MenuItem>
-          <StyledLink href="#">Contact</StyledLink>
-        </MenuItem>
+        {menuItem.map(({ text }) => (
+          <MenuItem>
+            <StyledLink href="#">{text}</StyledLink>
+          </MenuItem>
+        ))}
       </MenuItems>
       <Cross setIsOpen={setIsOpen} />
     </Nav>

@@ -30,6 +30,7 @@ const StyledHeader = styled.header`
 
 const StyledWrapper = styled.div`
   margin: 13px auto;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;

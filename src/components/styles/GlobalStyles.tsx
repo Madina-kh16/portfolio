@@ -10,6 +10,10 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0; 
   }
 
+  html {
+    font-size: 10px;
+  }
+
   body {
     overflow-x: hidden;
     margin: 0;

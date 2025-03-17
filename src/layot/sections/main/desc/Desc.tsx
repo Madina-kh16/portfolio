@@ -5,8 +5,9 @@ export const Desc = () => {
     <StyledMainWrap>
       <Text>Hi There</Text>
       <StyledPosit>
-        <Name>I am Svetlana Dyablo</Name>
-        <StyledPink></StyledPink>
+        <Name>
+          I am Svetlana Dyablo<StyledPink></StyledPink>
+        </Name>
       </StyledPosit>
       <MainTitle>
         A Web Developer. <StyledLine></StyledLine>
@@ -39,9 +40,6 @@ const StyledPosit = styled.div`
     z-index: 5;
     width: inherit;
   }
-  /* @media screen and (max-width: 920px) {
-    max-width: 308px;
-  } */
 `;
 
 const Name = styled.div`
@@ -72,6 +70,7 @@ const StyledPink = styled.span`
   position: absolute;
   right: 3px;
   background-color: #7572d5;
+  z-index: -1;
   @media screen and (max-width: 860px) {
     right: 0px;
     z-index: -1;
