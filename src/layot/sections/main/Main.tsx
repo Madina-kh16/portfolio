@@ -37,6 +37,6 @@ const Wrapper = styled.div`
     flex-direction: column;
     gap: 58px;
     margin: 0 auto;
-    max-width: 330px;
+    max-width: 329px;
   }
 `;

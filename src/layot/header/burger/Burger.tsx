@@ -18,5 +18,9 @@ export const Burger = ({ setIsOpen }) => {
 };
 
 const StyledBurger = styled.div`
-  cursor: pointer;
+  display: none;
+  @media screen and (max-width: 1140px) {
+    cursor: pointer;
+    display: block;
+  }
 `;

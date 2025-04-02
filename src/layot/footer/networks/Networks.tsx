@@ -2,18 +2,13 @@ import { Icon } from "../../../components/icon/Icon";
 
 import styled from "styled-components";
 
-const networks = [
-  { iconId: "inst" },
-  { iconId: "tg" },
-  { iconId: "vk" },
-  { iconId: "in" }
-];
+const networks = ["inst", "tg", "vk", "in"];
 
 export const Networks = () => {
   return (
     <StyledNetworks>
-      {networks.map(({ iconId }) => (
-        <StyledItem>
+      {networks.map((iconId, i) => (
+        <StyledItem key={i}>
           <StyledLink href="#">
             <Icon iconId={iconId} width="21" height="21" viewBox="0 0 21 21" />
           </StyledLink>

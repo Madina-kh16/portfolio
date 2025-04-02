@@ -1,17 +1,12 @@
 import styled from "styled-components";
 
 export const TabList = () => {
-  const lists = [
-    { text: "All" },
-    { text: "LANDING PAGE" },
-    { text: "REACT" },
-    { text: "SPA" }
-  ];
+  const lists = ["All", "LANDING PAGE", "REACT", "SPA"];
 
   return (
     <StyledTabLists>
-      {lists.map(({ text }) => (
-        <StyledItem>
+      {lists.map((text, i) => (
+        <StyledItem key={i}>
           <a href="#">{text}</a>
           <StyledLine></StyledLine>
         </StyledItem>

@@ -1,18 +1,10 @@
-import { Cross } from "./cross/Cross";
-
 import styled from "styled-components";
 
 const menuItems = ["Home", "Skills", "Works", "Testimony", "Contact"];
 
-export const Menu = ({  setIsOpen } : any) => {
+export const HeaderMenu = () => {
   return (
-    
-    <Nav
-    // style={{
-    //   display: isOpen ? "block" : "none"
-    // }}
-    >
-      
+    <Nav>
       <MenuItems>
         {menuItems.map((text, i) => (
           <MenuItem key={i}>
@@ -28,35 +20,29 @@ export const Menu = ({  setIsOpen } : any) => {
           </MenuItem>
         ))}
       </MenuItems>
-      <Cross setIsOpen={setIsOpen} />
     </Nav>
   );
 };
 
 const Nav = styled.nav`
-  /* display: none; */
-  margin: -79px -26px;
-  height: 100vh;
-  padding-top: 300px;
-  position: relative;
-  z-index: 11;
-  background-color: #2b2b2de5;
+  display: flex;
+  @media screen and (max-width: 1140px) {
+    display: none;
+  }
 `;
 
 const MenuItems = styled.ul`
   display: flex;
-  max-width: 226px;
-  flex-direction: column;
+  max-width: 715px;
   gap: 30px;
-  margin: 0 auto;
 `;
 
 const Link = styled.a`
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  font-size: 50px;
   line-height: 55px;
   color: transparent;
+  font-size: 30px;
 `;
 
 const Mask = styled.span`

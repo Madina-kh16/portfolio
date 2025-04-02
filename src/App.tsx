@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-import { Menu } from "./components/menu/Menu";
+// import { Menu } from "./components/menu/Menu";
 import { Header } from "./layot/header/Header";
 import { Footer } from "./layot/footer/Footer";
 import { Main } from "./layot/sections/main/Main";
@@ -11,19 +11,13 @@ import { Contact } from "./layot/sections/contact/Contact";
 import { Testimony } from "./layot/sections/testimony/Testimony";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  if (isOpen === true) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "visible";
-  }
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="App">
-      <Menu setIsOpen={setIsOpen} isOpen={isOpen} />
+      {/* <Menu setIsOpen={setIsOpen} isOpen={isOpen} /> */}
       <Main />
-      <Header setIsOpen={setIsOpen} />
+      <Header />
       <Skills />
       <Works />
       <Testimony />

@@ -10,20 +10,22 @@ export const Cards = () => {
       img: window.innerWidth < 480 ? proj1copy : proj1,
       btn: window.innerWidth < 480 ? "VIEW PROJECT" : false,
       name: "Social Network",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      i: 1
     },
     {
       img: proj2,
       name: "Timer",
       btn: "VIEW PROJECT",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim"
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim",
+      i: 2
     }
   ];
 
   return (
     <StyledCards>
-      {card.map(({ img, name, text, btn }) => (
-        <StyledCard>
+      {card.map(({ img, name, text, btn, i }) => (
+        <StyledCard key={i}>
           <StyledCardCommon>
             <StyledPhoto src={img} alt="" />
             <StyledBtn style={{ display: btn ? "block" : "none" }}>

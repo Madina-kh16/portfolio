@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
-  nav,
+  /* nav, */
   footer,
   header,
   section,
